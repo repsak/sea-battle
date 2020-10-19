@@ -116,6 +116,11 @@ function initBattleField(parentId) {
 
     parent.innerHTML = '' // этим бы занялся реакт :-)
     renderField(parent, field)
+
+    if(field.reduce((cur, next) => cur.concat(next), []).every(i => i !== 1)) {
+      alert('game over')
+    }
+
   })
 
   renderField(parent, field)
@@ -136,12 +141,12 @@ function renderField(element, field) {
         clonedCell.classList.add('ship')
       }
 
-      if (field[row][column] === 'x') {
-        clonedCell.classList.add('boom')
-      }
-
       if(field[row][column] === '.') {
         clonedCell.classList.add('hit')
+      }
+
+      if (field[row][column] === 'x') {
+        clonedCell.classList.add('boom')
       }
 
       element.appendChild(clonedCell)
