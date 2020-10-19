@@ -1,0 +1,57 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.playField {
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 100%;
+}
+
+.battlefield {
+    width: 300px;
+    height: 300px;
+
+    display: grid;
+
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.battlefield .cell {
+    border: 1px solid navy;
+    margin: 0 -1px -1px 0;
+}
+
+.cell.hit::after {
+    content: "\00b7";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    height: 100%;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cell.ship {
+    background-color: yellow;
+}
+
+.cell.boom {
+    background-color: red;
+}
+
