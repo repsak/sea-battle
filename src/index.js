@@ -93,7 +93,6 @@ function generateBattleField() {
       }
       ships++
     }
-
   }
 
   return field
