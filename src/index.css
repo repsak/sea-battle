@@ -26,8 +26,6 @@ body {
 
     display: grid;
 
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
 }
 
 .battlefield .cell {
@@ -45,6 +43,8 @@ body {
 
     font-size: 20px;
     font-weight: bold;
+
+    line-height: 0;
 }
 
 .cell.ship {
